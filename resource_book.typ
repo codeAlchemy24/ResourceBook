@@ -3,16 +3,22 @@
     fill: colors.fg,
     background: box(fill: colors.bg, height: 100%, width: 100%)
   )
-  grid(
-    columns: (1fr, 1fr),
-    grid(
-      columns: (auto),
-      row-gutter: 20pt,
-      name,
-      desc
-    ),
-    image(logo)
-  )
+  align(center)[
+    #grid(
+      columns: (1fr, 1fr),
+      grid(
+        columns: (auto),
+        row-gutter: 20pt,
+        name,
+        desc
+      ),
+      circle(fill: white, radius: 50pt)[
+        #align(center + horizon)[
+          #image(logo)
+        ]
+      ]
+    )
+  ]
 }
 
-#Page("Python", "python_logo.svg", "A Cool programming language", (A: "A", B: "B"))
+#Page("Python", "assets/python_logo.png", "A Cool programming language", (A: "A", B: "B"))
